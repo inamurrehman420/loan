@@ -28,10 +28,48 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-black  ms-auto py-4 py-lg-0">
                         <li class="nav-item"><a class="nav-link text-black" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link text-black" href="#portfolio">How it Works</a></li>
-                        <li class="nav-item"><a class="nav-link text-black" href="#about">Loans</a></li>
-                        <li class="nav-item"><a class="nav-link text-black" href="#team">Contact</a></li>
-                        <li class="nav-item"><a class="nav-link text-black" href="signin.html">SignIn</a></li>
+                        <li class="nav-item"><a class="nav-link text-black" href="#portfolio">Loans</a></li>
+                        <li class="nav-item"><a class="nav-link text-black" href="#about">Repay</a></li>
+                        <li class="nav-item"><a class="nav-link text-black" href="#team">Notifications</a></li>
+                        <li class="nav-item"><a class="nav-link text-black" href="signin.html">Contact</a></li>
+                        <li class="nav-item">
+                            
+
+                        <a class="text-reset nav-link text-black me-3 hidden-arrow position-relative"
+                                href="#"
+                                role="button"
+                                aria-expanded="false"
+                              >
+                                Notifications
+                                <span class="badge rounded-pill badge-notification bg-danger position-absolute shadow" style="right:-6px; top:-4px;">1</span>
+                              </a>                          
+                        </li>
+                        <li class="nav-item">  
+                        <div class="dropdown">   
+                         <a
+                            class=" dropdown-toggle dropdown-toggle d-flex align-items-center hidden-arrow "
+                            href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"
+                          >
+                            <img
+                              src="https://mdbootstrap.com/img/new/avatars/2.jpg"
+                              class="rounded-circle"
+                              height="25"
+                              alt=""
+                              loading="lazy"
+                            />
+                          </a>
+                            
+
+                              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink">
+                                <li><a class="dropdown-item" href="#">My Profile</a></li>
+                                <li><a class="dropdown-item" href="#">Manage Payments</a></li>
+                                <li><a class="dropdown-item" href="#">Transaction History</a></li>
+                                <li><a class="dropdown-item" href="#">Manage Bank Details</a></li>
+                                <li><a class="dropdown-item" href="#">Log Out</a></li>
+                              </ul>
+                            </div>
+                      </li>
+                      <li class="nav-item"><a class="nav-link text-white btn " style="background:#68824F;" ref="signin.html">Loan Calculator</a></li>
                     </ul>
                 </div>
             </div>
@@ -40,38 +78,367 @@
 
 <section>
     <div class="container">
-        <div class="w-50 bg-white shadow mx-auto py-3">
-            <p class="text-center fs-4"><span class="fw-bold">Signup</span></p>
-            <p class="fw-light text-center mb-0" style="color:#4D4F5C;">This is a secure website</p>
-            <p class="fw-light text-center" style="color:#4D4F5C;">Please enter your username and password to log in</p>
+        <div class="w-100 bg-white shadow mx-auto py-3">
             
+            <div class="row px-5">
+                <div class="col-lg-12 py-3">
+                    <p class=" fs-5 mb-0"><span class="fw-bold">Documents</span></p>
+                    <p class="fw-light mb-0" style="color:#4D4F5C;">Fill out the below form to check your eligibility
+                    to apply for Loan</p>
+                    <p class=" fs-5 mb-0 mt-4"><span class="fw-bold mt-2">Upload ID Card's Images</span></p>
+                    <p class="fw-lighter mb-0" style="color:#4D4F5C; font-size: 11px;">File size should be less than 1 MB</p>
+                </div>
+            </div>
+
+            <div class="row px-5">
+                <div class="col-lg-12 py-3"> 
+
+                    <form class="w-100 mx-auto mt-3">
+                        <div class="row " style="font-size:14px">
+                            <div class="col-lg-6 py-3"> 
+                                <!-- part -->
+                                <div class="row border-bottom me-1" style="font-size:14px;">
+                                    <div class="col-lg-4">
+                                        <p class="fs-6 fw-lighter mb-0" style="color:#8F8F8F;">National Identity 
+                                        </p><p style="color:#8F8F8F;">Card *</p>                                     
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class=" d-flex justify-content-center align-items-center"> <img src="assets/img/camera.png" alt="..." data-bs-toggle="modal" data-bs-target="#exampleModal" /> <!-- Modal -->
+                                        </div>
+                                        <p class="text-center">Front</p>
+                                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabel">
+                                                            Uploading a new photo</h5> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p class="body-desc">You can upload the image in JPG, GIF or PNG format. </p>
+                                                        <div class="photo-input"> <input type="file" id="loadFile" onchange="console.log(this.files[0].name);" /> <button class="btn btn-sm btn-primary" onclick="document.getElementById('loadFile').click()"> Select a file </button> </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <p class="footer-title">
+                                                            If you're having problems uploading, try choosing a smaller photo.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>                                        
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class=" d-flex justify-content-center align-items-center"> <img src="assets/img/camera.png" alt="..." data-bs-toggle="modal" data-bs-target="#exampleModal" /> <!-- Modal -->
+                                        </div>
+                                        <p class="text-center">Back</p>
+                                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabel">
+                                                            Uploading a new photo</h5> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p class="body-desc">You can upload the image in JPG, GIF or PNG format. </p>
+                                                        <div class="photo-input"> <input type="file" id="loadFile" onchange="console.log(this.files[0].name);" /> <button class="btn btn-sm btn-primary" onclick="document.getElementById('loadFile').click()"> Select a file </button> </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <p class="footer-title">
+                                                            If you're having problems uploading, try choosing a smaller photo.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- part -->
+
+                                                                <!-- part -->
+                                <div class="row border-bottom me-1 mt-3" style="font-size: 14px;">
+                                    <div class="col-lg-4">
+                                        <p class="fs-6 fw-lighter mb-0" style="color:#8F8F8F;">National Identity 
+                                        </p><p style="color:#8F8F8F;">Card *</p>                                     
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class=" d-flex justify-content-center align-items-center"> <img src="assets/img/camera.png" alt="..." data-bs-toggle="modal" data-bs-target="#exampleModal" /> <!-- Modal -->
+                                        </div>
+                                        <p class="text-center">Front</p>
+                                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabel">
+                                                            Uploading a new photo</h5> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p class="body-desc">You can upload the image in JPG, GIF or PNG format. </p>
+                                                        <div class="photo-input"> <input type="file" id="loadFile" onchange="console.log(this.files[0].name);" /> <button class="btn btn-sm btn-primary" onclick="document.getElementById('loadFile').click()"> Select a file </button> </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <p class="footer-title">
+                                                            If you're having problems uploading, try choosing a smaller photo.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>                                        
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class=" d-flex justify-content-center align-items-center"> <img src="assets/img/camera.png" alt="..." data-bs-toggle="modal" data-bs-target="#exampleModal" /> <!-- Modal -->
+                                        </div>
+                                        <p class="text-center">Back</p>
+                                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabel">
+                                                            Uploading a new photo</h5> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p class="body-desc">You can upload the image in JPG, GIF or PNG format. </p>
+                                                        <div class="photo-input"> <input type="file" id="loadFile" onchange="console.log(this.files[0].name);" /> <button class="btn btn-sm btn-primary" onclick="document.getElementById('loadFile').click()"> Select a file </button> </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <p class="footer-title">
+                                                            If you're having problems uploading, try choosing a smaller photo.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- part -->
 
 
-            <form class="w-75 mx-auto mt-3">
-              <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label m-0 ">Email </label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
-              </div>
-              <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label m-0">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-              </div>
-                <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label m-0">New Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="New Password">
-              </div>
-                <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label m-0">Mobile Number</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Mobile Number">
-              </div>
-                              <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label m-0">Code</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter Code">
-              </div>
 
-              <a href="set-profile.html" type="submit" class="btn btn-primary w-100 ">Signup</a>
-            </form>
+                             </div> 
+                            <div class="col-lg-6 py-3"> 
+                                 <!-- part -->
+                                <div class="row border-bottom">
+                                    <div class="col-lg-8 ">
+                                        <p class=" fw-lighter mb-0" style="color:#8F8F8F;">Passport Data Page Picture *
+                                        </p>                                
+                                    </div>
+                                
+                                    <div class="col-lg-4">
+                                        <div class=" d-flex justify-content-center align-items-center"> <img src="assets/img/camera.png" alt="..." data-bs-toggle="modal" data-bs-target="#exampleModal" /> <!-- Modal -->
+                                        </div>
+                                        <p class="text-center">Image</p>
+                                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabel">
+                                                            Uploading a new photo</h5> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p class="body-desc">You can upload the image in JPG, GIF or PNG format. </p>
+                                                        <div class="photo-input"> <input type="file" id="loadFile" onchange="console.log(this.files[0].name);" /> <button class="btn btn-sm btn-primary" onclick="document.getElementById('loadFile').click()"> Select a file </button> </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <p class="footer-title">
+                                                            If you're having problems uploading, try choosing a smaller photo.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
 
+                                <!-- part -->
+
+                                <!-- part -->
+                                <div class="row border-bottom mt-3">
+                                    <div class="col-lg-8 ">
+                                        <p class=" fw-lighter mb-0" style="color:#8F8F8F;">Bank Statement (Last 3 months) *
+                                        </p>                                
+                                    </div>
+                                
+                                    <div class="col-lg-4">
+                                        <div class=" d-flex justify-content-center align-items-center"> <img src="assets/img/camera.png" alt="..." data-bs-toggle="modal" data-bs-target="#exampleModal" /> <!-- Modal -->
+                                        </div>
+                                        <p class="text-center">Image</p>
+                                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabel">
+                                                            Uploading a new photo</h5> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p class="body-desc">
+                                                            You can upload the image in JPG, GIF or PNG format. </p>
+                                                        <div class="photo-input"> <input type="file" id="loadFile" onchange="console.log(this.files[0].name);" /> <button class="btn btn-sm btn-primary" onclick="document.getElementById('loadFile').click()"> Select a file </button> </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <p class="footer-title">
+                                                            If you're having problems uploading, try choosing a smaller photo.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- part -->
+                              
+                            </div>
+                        </div>
+
+                            <!-- Additional -->
+
+                            <div class="row">
+                                <div class="col-lg-12">
+
+                                    <p class=" fs-4 mb-0"><span class="fw-bold">Additional Documents</span></p>
+                                </div>
+                            </div>
+
+
+                        <div class="row " style="font-size:14px;">
+                            <div class="col-lg-6 py-3"> 
+                                <!-- part -->
+                                <div class="row border-bottom me-1">
+                                    <div class="col-lg-8">
+                                        <p class="fs-6 fw-lighter mb-0" style="color:#8F8F8F;">Social Security  
+                                        </p><p class="fs-6 fw-lighter mb-0" style="color:#8F8F8F;">Number Document</p>                                     
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class=" d-flex justify-content-center align-items-center"> <img src="assets/img/camera.png" alt="..." data-bs-toggle="modal" data-bs-target="#exampleModal" /> <!-- Modal -->
+                                        </div>
+                                        <p class="text-center">Back</p>
+                                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabel">
+                                                            Uploading a new photo</h5> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p class="body-desc">
+                                                            You can upload the image in JPG, GIF or PNG format. </p>
+                                                        <div class="photo-input"> <input type="file" id="loadFile" onchange="console.log(this.files[0].name);" /> <button class="btn btn-sm btn-primary" onclick="document.getElementById('loadFile').click()"> Select a file </button> </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <p class="footer-title">
+                                                            If you're having problems uploading, try choosing a smaller photo.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- part -->
+
+                                                                <!-- part -->
+                                <div class="row border-bottom mt-3 me-1" style="font-size:14px;">
+                                    <div class="col-lg-8">
+                                        <p class="fs-6 fw-lighter mb-0" style="color:#8F8F8F;">New Property Developer
+                                        </p><p class="fs-6 fw-lighter mb-0" style="color:#8F8F8F;">Contract</p>                                     
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class=" d-flex justify-content-center align-items-center"> <img src="assets/img/camera.png" alt="..." data-bs-toggle="modal" data-bs-target="#exampleModal" /> <!-- Modal -->
+                                        </div>
+                                        <p class="text-center">Back</p>
+                                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabel">
+                                                            Uploading a new photo</h5> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p class="body-desc">
+                                                            You can upload the image in JPG, GIF or PNG format. </p>
+                                                        <div class="photo-input"> <input type="file" id="loadFile" onchange="console.log(this.files[0].name);" /> <button class="btn btn-sm btn-primary" onclick="document.getElementById('loadFile').click()"> Select a file </button> </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <p class="footer-title">
+                                                            If you're having problems uploading, try choosing a smaller photo.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- part -->
+
+
+
+                             </div> 
+                            <div class="col-lg-6 py-3 "> 
+                                 <!-- part -->
+                                <div class="row border-bottom" style="font-size:14px;">
+                                    <div class="col-lg-8 ">
+                                        <p class=" fw-lighter mb-0" style="color:#8F8F8F;">Registered Mobile Money
+                                        </p>                                
+                                        <p class=" fw-lighter mb-0" style="color:#8F8F8F;">Number</p>
+                                    </div>
+                                
+                                    <div class="col-lg-4">
+                                        <div class=" d-flex justify-content-center align-items-center"> <img src="assets/img/camera.png" alt="..." data-bs-toggle="modal" data-bs-target="#exampleModal" /> <!-- Modal -->
+                                        </div>
+                                        <p class="text-center">Image</p>
+                                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabel">
+                                                            Uploading a new photo</h5> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p class="body-desc">
+                                                            You can upload the image in JPG, GIF or PNG format. </p>
+                                                        <div class="photo-input"> <input type="file" id="loadFile" onchange="console.log(this.files[0].name);" /> <button class="btn btn-sm btn-primary" onclick="document.getElementById('loadFile').click()"> Select a file </button> </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <p class="footer-title">
+                                                            If you're having problems uploading, try choosing a smaller photo.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- part -->
+
+                                <!-- part -->
+                                <div class="row mt-3" style="font-size:14px;">
+                                    <div class="col-lg-12 ">
+                                        <p class=" fw-lighter mb-0 text-danger" style="color:#8F8F8F;">Note: Once Details submitted cannot be changed.
+                                        </p>   
+                                    <div class="mb-3">
+                                          <div class="form-check">
+                                              <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                              <label class="form-check-label" for="defaultCheck1">
+                                                I confirm that above details belongs to me and are as per 
+my ID Card and I allow CAPTall to run credit checks on
+my behalf
+                                              </label>
+                                            </div>
+                                        </div>                             
+                                    </div>
+                                </div>
+
+                                <!-- part -->
+                              
+                            </div>
+                        </div>
+
+
+                    </form>
+
+                </div>
+            </div>
+
+
+<div class="row px-5">
+                <div class="col-lg-12">
+                    <a href="documents.html" type="submit" class="btn btn-primary w-50 mt-2">Submit</a>
+                </div>
+            </div>
 
 
         </div>
